@@ -1,11 +1,101 @@
 * {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Jost', serif;
     font-weight: 500;
+    font-size: 25px;
     text-align: center;
     margin: 0;
     padding: 0;
+    color: white;
 }
 
+
+header {
+    margin: 20px;
+}
+
+
+h1 {
+    font-size: 50px;
+}
+
+
+h4 {
+    font-size: 35px;
+}
+
+
+#toDo {
+    width: 50%;
+    margin: auto;
+}
+
+
 body {
-    background-color: palegreen;
+    background-color: rgb(243, 148, 252);
+    background-image: linear-gradient(rgba(243, 148, 252, .9), rgba(243, 148, 252, .9)), url(images/bg2.webp);
+}
+
+
+.part {
+    margin: 35px 0 35px 0;
+}
+
+
+#doList {
+
+    display: grid;
+    gap: 15px;
+    grid-template-columns: 1fr;
+}
+
+
+#doList li {
+    padding: 5px 10px 5px 10px;
+    background: rgb(192, 96, 171);
+    background: linear-gradient(90deg, rgb(192, 96, 171) 25%, rgb(74, 178, 226) 100%);
+    border: 0px solid ;
+    border-radius: 25px;
+    box-shadow: 0px 4px 18px 0px rgba(0,0,0,0.4);
+    max-width: 750px;
+}
+
+
+#doList li p {
+    display: inline-block;
+    width: 95%;
+    text-align: start;
+    overflow: visible;
+    cursor: pointer;
+}
+
+
+input {
+    background-color: transparent;
+    border: 0 transparent;
+    border-bottom: 1px solid white;
+    outline: none;
+    width: 550px;
+    height: 42px;
+    text-align: start;
+}
+
+
+button {
+    background: rgb(192, 96, 171);
+    padding: 0 10px 0 10px;
+    border: 0 transparent;
+    border-radius: 25px;
+    box-shadow: 0px 4px 12px 0px rgba(0,0,0,0.4);
+    cursor: pointer;
+}
+
+
+.remove {
+    text-align: right;
+    cursor: pointer;
+}
+
+
+.did {
+    text-decoration: line-through
 }

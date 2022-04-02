@@ -2,16 +2,23 @@
 <html lang="en">
 <head>
 
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Ali Kerem Ata's ToDo</title>
+
+    <title>Kegem's ToDo</title>
+
 
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&family=Roboto+Slab:wght@500&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300&family=Poppins:wght@400;900&family=Roboto+Slab:wght@500&family=Roboto:wght@300&display=swap" rel="stylesheet">
+
 
 </head>
 
@@ -19,31 +26,66 @@
 
     
     <header>
-        <h1>Ali Kerem Ata's To-Do</h1>
+
+        <h1>Kegem's ToDo</h1>
         <h4>With Javascript</h4>
+
     </header>
+
+
 
 
 
     <div id="toDo">
 
 
-        <div id="addDo">
-
+        <div class="part">
+            <input id="newDo" type="text">
+            <button onclick="addDo()">Add</button>
         </div>
 
 
 
-        <div id="doList">
-
+        <div class="part">
+            <ul id="doList">
+                
+            </ul>
         </div>
+        <p></p>
 
 
     </div>
 
 
     <script>
-        
+
+        let tempId = 0
+
+        function addDo() {
+            tempId += 1
+            let newDo = document.getElementById("newDo")
+            let newList = document.createElement("li")
+
+            newList.innerHTML = `<p id="${tempId}" onclick="did(${tempId})">${newDo.value}</p><span onclick="remove(${tempId})" class="remove">&cross;</span>`
+            
+            document.getElementById("doList").appendChild(newList)
+
+            newDo.value = ""
+        }
+
+
+        function did(id) {
+            let didDo = document.getElementById(`${id}`)
+            didDo.classList.toggle("did")
+        }
+
+
+        function remove(id) {
+            let oldDo = document.getElementById(`${id}`).parentElement
+            oldDo.remove()
+        }
+
+
     </script>
 
 </body>
