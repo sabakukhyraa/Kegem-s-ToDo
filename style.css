@@ -42,7 +42,6 @@ body {
 
 
 #doList {
-
     display: grid;
     gap: 15px;
     grid-template-columns: 1fr;
@@ -50,13 +49,15 @@ body {
 
 
 #doList li {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
     padding: 5px 10px 5px 10px;
     background: rgb(192, 96, 171);
-    background: linear-gradient(90deg, rgb(192, 96, 171) 25%, rgb(74, 178, 226) 100%);
+    background: linear-gradient(90deg, rgb(192, 96, 171) 15%, rgb(74, 178, 226) 100%);
     border: 0px solid ;
     border-radius: 25px;
     box-shadow: 0px 4px 18px 0px rgba(0,0,0,0.4);
-    max-width: 750px;
 }
 
 

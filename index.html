@@ -20,9 +20,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300&family=Poppins:wght@400;900&family=Roboto+Slab:wght@500&family=Roboto:wght@300&display=swap" rel="stylesheet">
 
 
+    <script src="index.js"></script>
+
+
 </head>
 
-<body>
+
+<body onload="memoryCall()">
 
     
     <header>
@@ -31,8 +35,6 @@
         <h4>With Javascript</h4>
 
     </header>
-
-
 
 
 
@@ -51,42 +53,10 @@
                 
             </ul>
         </div>
-        <p></p>
 
 
     </div>
 
-
-    <script>
-
-        let tempId = 0
-
-        function addDo() {
-            tempId += 1
-            let newDo = document.getElementById("newDo")
-            let newList = document.createElement("li")
-
-            newList.innerHTML = `<p id="${tempId}" onclick="did(${tempId})">${newDo.value}</p><span onclick="remove(${tempId})" class="remove">&cross;</span>`
-            
-            document.getElementById("doList").appendChild(newList)
-
-            newDo.value = ""
-        }
-
-
-        function did(id) {
-            let didDo = document.getElementById(`${id}`)
-            didDo.classList.toggle("did")
-        }
-
-
-        function remove(id) {
-            let oldDo = document.getElementById(`${id}`).parentElement
-            oldDo.remove()
-        }
-
-
-    </script>
 
 </body>
 
